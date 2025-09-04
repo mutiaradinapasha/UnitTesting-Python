@@ -14,10 +14,10 @@ class TestBookManager(unittest.TestCase):
 
     def test_remove_existing_book(self):
         """Test menghapus buku yang ada"""
-        book = Book("Basis Data", "Erlangga", 2021)
+        book = Book("Basis Data 1", "Erlangga", 2021)
         self.book_manager.add_book(book)
 
-        removed = self.book_manager.remove_book("Basis Data")
+        removed = self.book_manager.remove_book("Basis Data 1")
         self.assertTrue(removed)
         self.assertEqual(0, self.book_manager.get_book_count())
 
